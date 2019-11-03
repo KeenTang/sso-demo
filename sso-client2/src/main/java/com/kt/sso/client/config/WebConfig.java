@@ -17,8 +17,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Autowired
-    private LoginInterceptor loginInterceptor;
+    /*@Autowired
+    private LoginInterceptor loginInterceptor;*/
 
   /*  @Bean
     public FilterRegistrationBean<TimeFilter> timeFilterRegistrationBean() {
@@ -30,8 +30,8 @@ public class WebConfig implements WebMvcConfigurer {
 
    */
 
-    @Override
+    /*@Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor);
-    }
+    }*/
 }

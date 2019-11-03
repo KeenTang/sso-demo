@@ -88,6 +88,12 @@ public class SsoAuthorizationServerConfig extends AuthorizationServerConfigurerA
                 .authorizedGrantTypes("authorization_code", "refresh_token")
                 .redirectUris("http://localhost:8092/client2/login","http://127.0.0.1:8092/client2/login")
                 .scopes("all")
+                .autoApprove(true)
+                .and()
+                .withClient("vue").secret(passwordEncoder.encode("vue"))
+                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .redirectUris("http://localhost:9999/login","http://127.0.0.1:9999/login")
+                .scopes("all")
                 .autoApprove(true);
     }
 
